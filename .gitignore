@@ -1,0 +1,5 @@
+# Arquivos e pastas que não serão enviados para o repositório remoto
+
+target/
+
+.env
