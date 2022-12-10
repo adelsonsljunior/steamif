@@ -23,11 +23,12 @@ $ cd steamif/
 
 Crie uma cópia do arquivo `.env.example` com o nome de `.env`.
 
-No arquivo `.env`, coloque no campo `PG_PASSWORD` a senha que deseja para o banco de dados
+No arquivo `.env`, coloque no campo `PG_PASSWORD` a senha que deseja para o banco de dados.
 
 ### 4. Suba o container com o banco de dados
 
 ~~~
+$ docker build -t steamif .
 $ docker compose up 
 ~~~
 
