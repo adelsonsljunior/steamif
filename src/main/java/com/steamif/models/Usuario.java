@@ -7,21 +7,32 @@ public class Usuario {
     // Atributos
     private int id;
     private double saldo;
-    private String data_nascimento;
+    private String dataNascimento;
     private String email;
-    private String nome_usuario;
+    private String nomeUsuario;
     private String senha;
     private boolean adm;
     private ArrayList<Jogo> biblioteca;
 
-    // Construtor
-    public Usuario(int id, String nome_usuario, String email, String senha, String data_nascimento, double saldo, 
+    // Construtores
+    public Usuario(int id, String nomeUsuario, String email, String senha, String dataNascimento, double saldo, 
     boolean adm, ArrayList<Jogo> biblioteca) {
         this.id = id;
-        this.nome_usuario = nome_usuario;
+        this.nomeUsuario = nomeUsuario;
         this.email = email;
         this.senha = senha;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
+        this.saldo = saldo;
+        this.biblioteca = biblioteca;
+        this.adm = adm;
+    }
+
+    public Usuario(String nomeUsuario, String email, String senha, String dataNascimento, double saldo, 
+    boolean adm, ArrayList<Jogo> biblioteca) {
+        this.nomeUsuario = nomeUsuario;
+        this.email = email;
+        this.senha = senha;
+        this.dataNascimento = dataNascimento;
         this.saldo = saldo;
         this.biblioteca = biblioteca;
         this.adm = adm;
@@ -36,12 +47,12 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getNome_usuario() {
-        return nome_usuario;
+    public String getNomeUsuario() {
+        return nomeUsuario;
     }
 
-    public void setNome_usuario(String nome_usuario) {
-        this.nome_usuario = nome_usuario;
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
     }
 
     public String getEmail() {
@@ -60,12 +71,12 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public String getData_nascimento() {
-        return data_nascimento;
+    public String getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setData_nascimento(String data_nascimento) {
-        this.data_nascimento = data_nascimento;
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public double getSaldo() {

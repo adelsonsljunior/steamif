@@ -8,26 +8,41 @@ public class Jogo {
     private int id;
     private double desconto;
     private double preco;
-    private String data_lancamento;
+    private String dataLancamento;
     private String descricao;
-    private String nome_jogo;
-    private Classificacao classificacao_indic;
+    private String nomeJogo;
+    private Classificacao classificacaoIndic;
     private Desenvolvedor desenvolvedor;
     private Distribuidora distribuidora;
     private Requisitos requisitos;
     private ArrayList<Genero> genero;
 
-    // Construtor
-    public Jogo(int id, double desconto, double preco, String data_lancamento, String descricao, String nome_jogo,
-            Classificacao classificacao_indic, Desenvolvedor desenvolvedor, Distribuidora distribuidora,
+    // Construtores
+    public Jogo(int id, double desconto, double preco, String dataLancamento, String descricao, String nomeJogo,
+            Classificacao classificacaoIndic, Desenvolvedor desenvolvedor, Distribuidora distribuidora,
             Requisitos requisitos, ArrayList<Genero> genero) {
         this.id = id;
         this.desconto = desconto;
         this.preco = preco;
-        this.data_lancamento = data_lancamento;
+        this.dataLancamento = dataLancamento;
         this.descricao = descricao;
-        this.nome_jogo = nome_jogo;
-        this.classificacao_indic = classificacao_indic;
+        this.nomeJogo = nomeJogo;
+        this.classificacaoIndic = classificacaoIndic;
+        this.desenvolvedor = desenvolvedor;
+        this.distribuidora = distribuidora;
+        this.requisitos = requisitos;
+        this.genero = genero;
+    }
+
+    public Jogo(double desconto, double preco, String dataLancamento, String descricao, String nomeJogo,
+            Classificacao classificacaoIndic, Desenvolvedor desenvolvedor, Distribuidora distribuidora,
+            Requisitos requisitos, ArrayList<Genero> genero) {
+        this.desconto = desconto;
+        this.preco = preco;
+        this.dataLancamento = dataLancamento;
+        this.descricao = descricao;
+        this.nomeJogo = nomeJogo;
+        this.classificacaoIndic = classificacaoIndic;
         this.desenvolvedor = desenvolvedor;
         this.distribuidora = distribuidora;
         this.requisitos = requisitos;
@@ -59,12 +74,12 @@ public class Jogo {
         this.preco = preco;
     }
 
-    public String getData_lancamento() {
-        return data_lancamento;
+    public String getDataLancamento() {
+        return dataLancamento;
     }
 
-    public void setData_lancamento(String data_lancamento) {
-        this.data_lancamento = data_lancamento;
+    public void setDataLancamento(String dataLancamento) {
+        this.dataLancamento = dataLancamento;
     }
 
     public String getDescricao() {
@@ -75,20 +90,20 @@ public class Jogo {
         this.descricao = descricao;
     }
 
-    public String getNome_jogo() {
-        return nome_jogo;
+    public String getNomeJogo() {
+        return nomeJogo;
     }
 
-    public void setNome_jogo(String nome_jogo) {
-        this.nome_jogo = nome_jogo;
+    public void setNomeJogo(String nomeJogo) {
+        this.nomeJogo = nomeJogo;
     }
 
-    public Classificacao getClassificacao_indic() {
-        return classificacao_indic;
+    public Classificacao getClassificacaoIndic() {
+        return classificacaoIndic;
     }
 
-    public void setClassificacao_indic(Classificacao classificacao_indic) {
-        this.classificacao_indic = classificacao_indic;
+    public void setClassificacaoIndic(Classificacao classificacaoIndic) {
+        this.classificacaoIndic = classificacaoIndic;
     }
 
     public Desenvolvedor getDesenvolvedor() {

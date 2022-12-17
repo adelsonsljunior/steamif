@@ -4,12 +4,16 @@ public class Genero {
 
     // Atributos
     private int id;
-    private String nome_genero;
+    private String nomeGenero;
 
-    // Construtor
-    public Genero(int id, String nome_genero) {
+    // Construtores
+    public Genero(int id, String nomeGenero) {
         this.id = id;
-        this.nome_genero = nome_genero;
+        this.nomeGenero = nomeGenero;
+    }
+
+    public Genero(String nomeGenero) {
+        this.nomeGenero = nomeGenero;
     }
 
     // Getters e Setters
@@ -21,12 +25,12 @@ public class Genero {
         this.id = id;
     }
 
-    public String getNome_genero() {
-        return nome_genero;
+    public String getNomeGenero() {
+        return nomeGenero;
     }
 
-    public void setNome_genero(String nome_genero) {
-        this.nome_genero = nome_genero;
+    public void setNomeGenero(String nome_genero) {
+        this.nomeGenero = nome_genero;
     }
 
 }

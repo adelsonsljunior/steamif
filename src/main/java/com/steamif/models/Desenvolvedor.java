@@ -4,12 +4,16 @@ public class Desenvolvedor {
 
     // Atributos
     private int id;
-    private String nome_dev;
+    private String nomeDev;
 
-    // Construtor
-    public Desenvolvedor(int id, String nome_dev) {
+    // Construtores
+    public Desenvolvedor(int id, String nomeDev) {
         this.id = id;
-        this.nome_dev = nome_dev;
+        this.nomeDev = nomeDev;
+    }
+
+    public Desenvolvedor(String nomeDev) {
+        this.nomeDev = nomeDev;
     }
 
     // Getters e Setters
@@ -21,12 +25,12 @@ public class Desenvolvedor {
         this.id = id;
     }
 
-    public String getNome_dev() {
-        return nome_dev;
+    public String getNomeDev() {
+        return nomeDev;
     }
 
-    public void setNome_dev(String nome_dev) {
-        this.nome_dev = nome_dev;
+    public void setNomeDev(String nomeDev) {
+        this.nomeDev = nomeDev;
     }
 
 }

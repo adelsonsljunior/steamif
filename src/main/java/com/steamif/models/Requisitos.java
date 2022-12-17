@@ -6,14 +6,20 @@ public class Requisitos {
     private int id;
     private int ram;
     private double armazenamento;
-    private String sistema_op;
+    private String sistemaOp;
 
-    // Construtor
-    public Requisitos(int id, int ram, double armazenamento, String sistema_op) {
+    // Construtores
+    public Requisitos(int id, int ram, double armazenamento, String sistemaOp) {
         this.id = id;
         this.ram = ram;
         this.armazenamento = armazenamento;
-        this.sistema_op = sistema_op;
+        this.sistemaOp = sistemaOp;
+    }
+
+    public Requisitos(int ram, double armazenamento, String sistemaOp) {
+        this.ram = ram;
+        this.armazenamento = armazenamento;
+        this.sistemaOp = sistemaOp;
     }
 
     // Getters e Setters
@@ -41,12 +47,12 @@ public class Requisitos {
         this.armazenamento = armazenamento;
     }
 
-    public String getSistema_op() {
-        return sistema_op;
+    public String getSistemaOp() {
+        return sistemaOp;
     }
 
-    public void setSistema_op(String sistema_op) {
-        this.sistema_op = sistema_op;
+    public void setSistemaOp(String sistemaOp) {
+        this.sistemaOp = sistemaOp;
     }
 
 }

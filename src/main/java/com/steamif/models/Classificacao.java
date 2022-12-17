@@ -4,12 +4,16 @@ public class Classificacao {
 
     // Atributos
     private int id;
-    private int idade_minima;
+    private int idadeMinima;
 
-    // Construtor
-    public Classificacao(int id, int idade_minima) {
+    // Construtores
+    public Classificacao(int id, int idadeMinima) {
         this.id = id;
-        this.idade_minima = idade_minima;
+        this.idadeMinima = idadeMinima;
+    }
+
+    public Classificacao(int idadeMinima) {
+        this.idadeMinima = idadeMinima;
     }
 
     // Getters e Setters
@@ -21,12 +25,12 @@ public class Classificacao {
         this.id = id;
     }
 
-    public int getIdade_minima() {
-        return idade_minima;
+    public int getIdadeMinima() {
+        return idadeMinima;
     }
 
-    public void setIdade_minima(int idade_minima) {
-        this.idade_minima = idade_minima;
+    public void setIdadeMinima(int idadeMinima) {
+        this.idadeMinima = idadeMinima;
     }
 
 }

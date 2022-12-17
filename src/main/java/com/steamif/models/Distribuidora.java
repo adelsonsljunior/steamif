@@ -4,12 +4,16 @@ public class Distribuidora {
 
     // Atributos
     private int id;
-    private String nome_dist;
+    private String nomeDist;
 
-    // Construtor
-    public Distribuidora(int id, String nome_dist) {
+    // Construtores
+    public Distribuidora(int id, String nomeDist) {
         this.id = id;
-        this.nome_dist = nome_dist;
+        this.nomeDist = nomeDist;
+    }
+
+    public Distribuidora(String nomeDist) {
+        this.nomeDist = nomeDist;
     }
 
     // Getters e Setters
@@ -21,11 +25,11 @@ public class Distribuidora {
         this.id = id;
     }
 
-    public String getNome_dist() {
-        return nome_dist;
+    public String getNomeDist() {
+        return nomeDist;
     }
 
-    public void setNome_dist(String nome_dist) {
-        this.nome_dist = nome_dist;
+    public void setNomeDist(String nomeDist) {
+        this.nomeDist = nomeDist;
     }
 }
