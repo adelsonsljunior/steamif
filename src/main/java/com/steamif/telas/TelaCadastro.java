@@ -17,7 +17,7 @@ public class TelaCadastro extends javax.swing.JFrame {
      */
     public TelaCadastro() {
         initComponents();
-        getContentPane().setBackground(new Color(188, 99, 233));
+        getContentPane().setBackground(new Color(89, 0, 179));
     }
 
     /**
@@ -29,86 +29,32 @@ public class TelaCadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel5 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        campoNascimento1 = new javax.swing.JFormattedTextField();
+        campoNascimento2 = new javax.swing.JFormattedTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        campoNascimento1 = new javax.swing.JFormattedTextField();
-        jTextField5 = new javax.swing.JTextField();
-        campoNascimento2 = new javax.swing.JFormattedTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(600, 600));
+        setTitle("Cadastro");
         setPreferredSize(new java.awt.Dimension(600, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setFont(new java.awt.Font("Lucida Handwriting", 1, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 255, 255));
-        jLabel5.setText("STEAMIF");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 200, -1));
-
-        jLabel6.setFont(new java.awt.Font("Arial Narrow", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel6.setText("Fazer Cadastro");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 220, -1));
-
-        jLabel9.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(102, 0, 153));
-        jLabel9.setText("Nome:");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
-
-        jTextField4.setBackground(new java.awt.Color(204, 153, 255));
-        jTextField4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(51, 0, 51));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, 290, 30));
-
-        jLabel8.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(102, 0, 153));
-        jLabel8.setText("Criar senha:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
-
-        jButton1.setBackground(new java.awt.Color(255, 255, 51));
-        jButton1.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(153, 153, 0));
-        jButton1.setText("CADASTRAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 510, 140, 40));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/steamif/telas/logo_minmin.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, -1, -1));
-
-        jLabel10.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(102, 0, 153));
-        jLabel10.setText("Confirmar senha:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
-
-        jLabel11.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(102, 0, 153));
-        jLabel11.setText("Email:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(102, 0, 153));
-        jLabel12.setText("Telefone:");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
-
-        jLabel13.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(102, 0, 153));
-        jLabel13.setText("Data de Nascimento:");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
+        jTextField5.setBackground(new java.awt.Color(204, 153, 255));
+        jTextField5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jTextField5.setForeground(new java.awt.Color(51, 0, 51));
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 410, 30));
 
         campoNascimento1.setBackground(new java.awt.Color(204, 153, 255));
         campoNascimento1.setForeground(new java.awt.Color(51, 0, 51));
@@ -120,11 +66,6 @@ public class TelaCadastro extends javax.swing.JFrame {
         campoNascimento1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         getContentPane().add(campoNascimento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 240, 30));
 
-        jTextField5.setBackground(new java.awt.Color(204, 153, 255));
-        jTextField5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(51, 0, 51));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 410, 30));
-
         campoNascimento2.setBackground(new java.awt.Color(204, 153, 255));
         campoNascimento2.setForeground(new java.awt.Color(51, 0, 51));
         try {
@@ -135,15 +76,122 @@ public class TelaCadastro extends javax.swing.JFrame {
         campoNascimento2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         getContentPane().add(campoNascimento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 180, 30));
 
-        jTextField6.setBackground(new java.awt.Color(204, 153, 255));
-        jTextField6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(51, 0, 51));
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 420, 30));
-
         jTextField7.setBackground(new java.awt.Color(204, 153, 255));
         jTextField7.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jTextField7.setForeground(new java.awt.Color(51, 0, 51));
         getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 350, 30));
+
+        jTextField4.setBackground(new java.awt.Color(204, 153, 255));
+        jTextField4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jTextField4.setForeground(new java.awt.Color(51, 0, 51));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, 290, 30));
+
+        jPanel1.setBackground(new java.awt.Color(153, 51, 255));
+
+        jLabel6.setFont(new java.awt.Font("Arial Narrow", 1, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel6.setText("Fazer Cadastro");
+
+        jLabel9.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(102, 0, 153));
+        jLabel9.setText("Nome:");
+
+        jLabel11.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(102, 0, 153));
+        jLabel11.setText("Email:");
+
+        jTextField6.setBackground(new java.awt.Color(204, 153, 255));
+        jTextField6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jTextField6.setForeground(new java.awt.Color(51, 0, 51));
+
+        jLabel12.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(102, 0, 153));
+        jLabel12.setText("Telefone:");
+
+        jLabel13.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(102, 0, 153));
+        jLabel13.setText("Data de Nascimento:");
+
+        jLabel8.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(102, 0, 153));
+        jLabel8.setText("Criar senha:");
+
+        jLabel10.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(102, 0, 153));
+        jLabel10.setText("Confirmar senha:");
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 51));
+        jButton1.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(153, 153, 0));
+        jButton1.setText("CADASTRAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(151, 151, 151)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel9))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel12))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel13))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel8))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel10))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addGap(32, 32, 32)
+                .addComponent(jLabel9)
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel13)
+                .addGap(27, 27, 27)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel10)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(93, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 520, 520));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/steamif/telas/imagens/Logo 100px.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -151,7 +199,7 @@ public class TelaCadastro extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //INSIRAM AQUI A PARTE DO BANCO
         new TelaLogin().setVisible(true);
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -193,15 +241,15 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField campoNascimento1;
     private javax.swing.JFormattedTextField campoNascimento2;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
