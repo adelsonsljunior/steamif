@@ -1,0 +1,13 @@
+com\steamif\conexao\Env.class
+com\steamif\telas\Main$2.class
+com\steamif\models\Desenvolvedor.class
+com\steamif\models\Genero.class
+com\steamif\conexao\Conexao.class
+com\steamif\models\Distribuidora.class
+com\steamif\models\Requisitos.class
+com\steamif\telas\Main$1.class
+com\steamif\models\Classificacao.class
+com\steamif\telas\Main.class
+com\steamif\Main.class
+com\steamif\models\Jogo.class
+com\steamif\models\Usuario.class
