@@ -4,7 +4,10 @@
  */
 package com.steamif.telas;
 
+import com.steamif.dao.UsuarioDAO;
+import com.steamif.models.Usuario;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,7 +20,7 @@ public class TelaCadastro extends javax.swing.JFrame {
      */
     public TelaCadastro() {
         initComponents();
-        getContentPane().setBackground(new Color(188, 99, 233));
+        getContentPane().setBackground(new Color(89, 0, 179));
     }
 
     /**
@@ -29,52 +32,65 @@ public class TelaCadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel5 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        campoNascimento1 = new javax.swing.JFormattedTextField();
-        jTextField5 = new javax.swing.JTextField();
-        campoNascimento2 = new javax.swing.JFormattedTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        campoNome = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        campoEmail = new javax.swing.JTextField();
+        campoSenha = new javax.swing.JTextField();
+        campoConfirmarSenha = new javax.swing.JTextField();
+        botaoVoltar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastro");
+        setMaximumSize(new java.awt.Dimension(600, 600));
         setMinimumSize(new java.awt.Dimension(600, 600));
         setPreferredSize(new java.awt.Dimension(600, 600));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setFont(new java.awt.Font("Lucida Handwriting", 1, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 255, 255));
-        jLabel5.setText("STEAMIF");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 200, -1));
+        jPanel1.setBackground(new java.awt.Color(153, 51, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setFont(new java.awt.Font("Arial Narrow", 1, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 0));
         jLabel6.setText("Fazer Cadastro");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 220, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 13, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(102, 0, 153));
         jLabel9.setText("Nome:");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
-        jTextField4.setBackground(new java.awt.Color(204, 153, 255));
-        jTextField4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(51, 0, 51));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, 290, 30));
+        jLabel11.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(102, 0, 153));
+        jLabel11.setText("Email:");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
+
+        campoNome.setBackground(new java.awt.Color(204, 153, 255));
+        campoNome.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        campoNome.setForeground(new java.awt.Color(51, 0, 51));
+        campoNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNomeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 390, 30));
 
         jLabel8.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(102, 0, 153));
         jLabel8.setText("Criar senha:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(102, 0, 153));
+        jLabel10.setText("Confirmar senha:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 51));
         jButton1.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
@@ -85,74 +101,90 @@ public class TelaCadastro extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 510, 140, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 140, 40));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/steamif/telas/logo_minmin.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, -1, -1));
+        campoEmail.setBackground(new java.awt.Color(204, 153, 255));
+        campoEmail.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        campoEmail.setForeground(new java.awt.Color(51, 0, 51));
+        jPanel1.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 390, 30));
 
-        jLabel10.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(102, 0, 153));
-        jLabel10.setText("Confirmar senha:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
+        campoSenha.setBackground(new java.awt.Color(204, 153, 255));
+        campoSenha.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        campoSenha.setForeground(new java.awt.Color(51, 0, 51));
+        jPanel1.add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 320, 30));
 
-        jLabel11.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(102, 0, 153));
-        jLabel11.setText("Email:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+        campoConfirmarSenha.setBackground(new java.awt.Color(204, 153, 255));
+        campoConfirmarSenha.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        campoConfirmarSenha.setForeground(new java.awt.Color(51, 0, 51));
+        campoConfirmarSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoConfirmarSenhaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(campoConfirmarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 270, 30));
 
-        jLabel12.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(102, 0, 153));
-        jLabel12.setText("Telefone:");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+        botaoVoltar.setBackground(new java.awt.Color(102, 0, 102));
+        botaoVoltar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botaoVoltar.setForeground(new java.awt.Color(255, 204, 255));
+        botaoVoltar.setText("Voltar");
+        botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoVoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(botaoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, -1, -1));
 
-        jLabel13.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(102, 0, 153));
-        jLabel13.setText("Data de Nascimento:");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 510, 500));
 
-        campoNascimento1.setBackground(new java.awt.Color(204, 153, 255));
-        campoNascimento1.setForeground(new java.awt.Color(51, 0, 51));
-        try {
-            campoNascimento1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        campoNascimento1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        getContentPane().add(campoNascimento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 240, 30));
-
-        jTextField5.setBackground(new java.awt.Color(204, 153, 255));
-        jTextField5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(51, 0, 51));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 410, 30));
-
-        campoNascimento2.setBackground(new java.awt.Color(204, 153, 255));
-        campoNascimento2.setForeground(new java.awt.Color(51, 0, 51));
-        try {
-            campoNascimento2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        campoNascimento2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        getContentPane().add(campoNascimento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 180, 30));
-
-        jTextField6.setBackground(new java.awt.Color(204, 153, 255));
-        jTextField6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(51, 0, 51));
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 420, 30));
-
-        jTextField7.setBackground(new java.awt.Color(204, 153, 255));
-        jTextField7.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(51, 0, 51));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 350, 30));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/steamif/telas/imagens/Logo 100px.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //INSIRAM AQUI A PARTE DO BANCO
-        new TelaLogin().setVisible(true);
-        
+        String nome = campoNome.getText();
+        String email = campoEmail.getText();
+        String senha = campoSenha.getText();
+        String confirmarSenha = campoConfirmarSenha.getText();
+
+        if (!nome.equals("") && !email.equals("") && !senha.equals("") && !confirmarSenha.equals("")) {
+
+            if (senha.equals(confirmarSenha)) {
+                try {
+                    Usuario usuario = new Usuario(nome, email, senha);
+                    UsuarioDAO usuarioDAO = new UsuarioDAO();
+                    usuarioDAO.cadastrarUsuario(usuario);
+                    JOptionPane.showMessageDialog(null, "Usuário cadastrado! Por favor faça login.");
+                    new TelaLogin().setVisible(true);
+                    setVisible(false);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+                JOptionPane.showMessageDialog(null, "É necessário que as senhas sejam iguais!");
+                campoConfirmarSenha.setText("");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Preencha todos os campos!");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void campoConfirmarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoConfirmarSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoConfirmarSenhaActionPerformed
+
+    private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
+        // TODO add your handling code here:
+            new TelaLogin().setVisible(true);
+            setVisible(false);
+    }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void campoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,21 +222,18 @@ public class TelaCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFormattedTextField campoNascimento1;
-    private javax.swing.JFormattedTextField campoNascimento2;
+    private javax.swing.JButton botaoVoltar;
+    private javax.swing.JTextField campoConfirmarSenha;
+    private javax.swing.JTextField campoEmail;
+    private javax.swing.JTextField campoNome;
+    private javax.swing.JTextField campoSenha;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,66 +1,56 @@
 /* CRIANDO TABELAS */
 
 CREATE TABLE usuarios(
-    id      SERIAL PRIMARY KEY,
-    nome        VARCHAR(50) NOT NULL,
-    email       VARCHAR(50) UNIQUE,
-    senha       VARCHAR(50) NOT NULL,
-    data_nascimento     DATE NOT NULL,
+    id                SERIAL PRIMARY KEY,
+    nome              VARCHAR(50) NOT NULL,
+    email             VARCHAR(50) UNIQUE,
+    senha             VARCHAR(50) NOT NULL,
     administrador     BOOLEAN NOT NULL DEFAULT FALSE
 );
 
-CREATE TABLE requisitos(
-    id     SERIAL PRIMARY KEY,
-    sistema_op      VARCHAR(20) NOT NULL,
-    ram             DECIMAL(3,2) NOT NULL,
-    armazenamento   DECIMAL(3,2) NOT NULL
-);
-
-CREATE TABLE generos(
-    id      SERIAL PRIMARY KEY,
-    nome    VARCHAR(50) NOT NULL
-);
-
-CREATE TABLE classificacoes(
-    id      SERIAL PRIMARY KEY,
-    idade_minima    INT NOT NULL
-);
-
 CREATE TABLE jogos(
-    id      SERIAL PRIMARY KEY,
-    nome    VARCHAR(50) NOT NULL,
-    preco   DECIMAL(3,2) NOT NULL,
-    desconto   DECIMAL(3,2) NOT NULL,
-    descricao   VARCHAR(200) NOT NULL,
-    data_lancamento DATE NOT NULL,
-    id_requisito    INT NOT NULL,
-    desenvolvedora  VARCHAR(50) NOT NULL,
-    distribuidora   VARCHAR(50) NOT NULL,
-    id_classificacao    INT NOT NULL,
-    FOREIGN KEY (id_requisito) REFERENCES requisitos(id),
-    FOREIGN KEY (id_classificacao) REFERENCES classificacoes(id)
+    id                  SERIAL PRIMARY KEY,
+    nome                VARCHAR(50) NOT NULL,
+    preco               NUMERIC NOT NULL,
+    desconto            NUMERIC NOT NULL,
+    desenvolvedora      VARCHAR(50) NOT NULL,
+    distribuidora       VARCHAR(50) NOT NULL,
+    genero              VARCHAR(50) NOT NULL,
+    classificacao       INT NOT NULL
 );
 
 
-CREATE TABLE jogos_generos(
-    id_jogo     INT NOT NULL,
-    id_genero   INT NOT NULL,
-    FOREIGN KEY (id_jogo) REFERENCES jogos(id),
-    FOREIGN KEY (id_genero) REFERENCES generos(id)
-);
-
-CREATE TABLE usuarios_jogos(
+CREATE TABLE jogos_usuarios(
     id_usuario  INT NOT NULL,
     id_jogo     INT NOT NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
     FOREIGN KEY (id_jogo) REFERENCES jogos(id)
 );
 
-/* INSERINDO DADOS*/
+/*Inserindio dados no banco*/
 
-INSERT INTO classificacoes(idade_minima) 
-VALUES (0), (10), (12), (14), (16), (18);
+/*USUARIOS ADMS*/
+INSERT INTO usuarios (nome, email, senha, administrador) 
+VALUES ('Adelson', 'adelson@ifal.com', '12345', TRUE),
+    ('Felipe', 'felipe@ifal.com','12345', TRUE),
+    ('Cayo', 'cayo@ifal.com', '12345', TRUE);
+
+/*JOGOS*/
+
+INSERT INTO jogos (nome, preco, desconto, desenvolvedora, distribuidora, classificacao, genero)
+VALUES ('Elder Ring', 100, 0, 'FROMSOFTWARE', 'XBOX', 16, 'RPG'),
+    ('Naruto Shippuden', 100, 0, 'CYBERCONECT2', 'PLAYSTATION', 14, 'AÇÃO'),
+    ('Cuphead', 100, 0, 'STUDIO MHDR', 'XBOX', 16, 'PLATAFORMA'),
+    ('The Witcher', 100, 0, 'CD PROJECT', 'PLAYSTATION', 18, 'RPG'),
+    ('Hollow Knight', 100, 0, 'TEAM CHERRY', 'PLAYSTATION', 18, 'PLATAFORMA'),
+    ('God of War', 100, 0, 'SANTA MONICA', 'PLAYSTATION', 18, 'RPG');
 
 
-
+INSERT INTO usuarios_jogos (id_usuario, id_jogo)
+VALUES (1, 1),
+    (1, 2),
+    (1, 3),
+    (1, 4),
+    (1, 5),
+    (1, 6);
 
