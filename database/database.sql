@@ -46,7 +46,7 @@ VALUES ('Elder Ring', 100, 0, 'FROMSOFTWARE', 'XBOX', 16, 'RPG'),
     ('God of War', 100, 0, 'SANTA MONICA', 'PLAYSTATION', 18, 'RPG');
 
 
-INSERT INTO usuarios_jogos (id_usuario, id_jogo)
+INSERT INTO jogos_usuarios (id_usuario, id_jogo)
 VALUES (1, 1),
     (1, 2),
     (1, 3),
